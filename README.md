@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A simple API for tracking expenses.
+A simple expense tracking application with different bugs to solve using devtools. This application coincides with the [DevTools Debugging Lesson Plan (link to come)]().
 
 ## Setup
 
