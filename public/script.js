@@ -14,6 +14,7 @@ const getExpenses = () => {
   });
 };
 
+
 // Render expenses to the DOM
 const renderExpenses = (expenses) => {
   const tableBody = $('#expenses-data tbody');
@@ -27,6 +28,24 @@ const renderExpenses = (expenses) => {
   });
 };
 
+
+// Highlight expenses that match the selected category
+$('#category-highlight').on('change', (e) => {
+
+  // Remove any pre-existing highlights
+  $('#expenses-data').find('tr').removeClass('highlighted');
+
+  // Get the currently selected category and find matching table rows
+  const selectedCategory = $(e.currentTarget).val();
+  const matches = $('#expenses-data').find(`tr.${selectedCategory}`);
+
+  // Add a highlight class to all matches
+  matches.each((index, match) => {
+    $(match).addClass('highlighted');
+  });
+});
+
+
 $(document).ready(() => {
-  loadExpenses();
+  getExpenses();
 });
