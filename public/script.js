@@ -27,6 +27,13 @@ const renderExpenses = (expenses) => {
   });
 };
 
+// Add event handler for submitting a new expense
+$('#submit-expense').on('submit', (e) => {
+  e.preventDefault();
+  console.log('Submitting a new expense...');
+});
+
+
 $(document).ready(() => {
   loadExpenses();
 });
