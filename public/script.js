@@ -29,11 +29,23 @@ const renderExpenses = (expenses) => {
 
 // Add event handler for submitting a new expense
 $('#submit-expense').on('submit', (e) => {
-  e.preventDefault();
-  console.log('Submitting a new expense...');
+  let data = {};
+  $('.form-field').each((index, formField) => {
+    data[$(formField).attr('name')] = $(formField).val();
+  });
+
+  $.ajax({
+    method: 'POST',
+    dataType: 'json',
+    url: '/expensive',
+    data: data,
+    success: function (data) {
+      renderExpenses(data);
+    }
+  });
 });
 
 
 $(document).ready(() => {
-  loadExpenses();
+  getExpenses();
 });
