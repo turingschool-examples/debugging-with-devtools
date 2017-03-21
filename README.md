@@ -43,3 +43,10 @@ Whenever we make a selection in the select menu for 'Highlight Expenses', we wan
 When we fill out the expense form and click the "Submit Expense" button, we should see our new expense appended to the bottom of the list of expenses. Currently, nothing is happening when we try to submit a new expense. Figure out why!
 
 Try not to rely on using `console.logs()` here. Instead, set breakpoints in the sources panel to pause code execution and inspect your local variables.
+
+------------------------------------------
+
+**Practice Scenario 3 - Inline Editing**  
+**Branch:** [edit-inline](https://github.com/turingschool-examples/debugging-with-devtools/tree/edit-inline)
+
+When a user clicks on a pre-existing expense, we want to be able to update that single value for the expense when they hit the ENTER key. When we first start up this branch, we can see that we're not even getting our pre-defined expenses rendered to the DOM. Figure out why, then try out the inline editing. Spoiler alert, it's not going to work.
