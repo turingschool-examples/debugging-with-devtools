@@ -37,7 +37,6 @@ app.get('/expenses/:id', (request, response) => {
 
 app.post('/expenses', (request, response) => {
   const expense = request.body;
-  console.log("EXPENSE: ", expense);
 
   for (let requiredParameter of ['category', 'cost', 'description']) {
     if (!expense[requiredParameter]) {
