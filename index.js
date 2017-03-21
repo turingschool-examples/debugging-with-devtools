@@ -52,6 +52,7 @@ app.post('/expenses', (request, response) => {
 });
 
 app.patch('/expenses/:id', (request, response) => {
+  const expense = request.body;
   const { id } = request.params;
   const index = app.locals.expenses.findIndex((m) => m.id == id);
 
@@ -64,7 +65,7 @@ app.patch('/expenses/:id', (request, response) => {
   }
 
   const oldexpense = app.locals.expenses[index];
-  app.locals.expenses[index] = Object.assign(oldexpense, request.body);
+  app.locals.expenses[index] = Object.assign(oldexpense, expense);
 
   return response.sendStatus(204);
 });
