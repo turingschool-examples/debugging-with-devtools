@@ -1,16 +1,15 @@
 // Retrieve expenses from the API
 const getExpenses = () => {
-  $.ajax({
-    method: 'GET',
+  return fetch('/expenses', {
     dataType: 'json',
-    url: '/expenses',
-    success: function (data) {
-      console.log('Expenses returned successfully!');
-      renderExpenses(data.expenses);
-    },
-    error: function (error) {
-      console.error('There was some kind of error.');
-    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Expenses returned successfully!');
+    renderExpenses(data.expenses);
+  })
+  .catch(error => {
+    console.error('There was some kind of error.');
   });
 };
 
