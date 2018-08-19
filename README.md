@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A simple expense tracking application with different bugs to solve using devtools. This application coincides with the [DevTools Debugging Lesson Plan](http://backend.turing.io/module4/lessons/fe_dev_tool_debugging)].
+A simple expense tracking application with different bugs to solve using devtools. This application coincides with the [DevTools Debugging Lesson Plan](http://backend.turing.io/module4/lessons/fe_dev_tool_debugging).
 
 ## Setup
 
