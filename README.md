@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A simple expense tracking application with different bugs to solve using devtools. This application coincides with the [DevTools Debugging Lesson Plan (link to come)]().
+A simple expense tracking application with different bugs to solve using devtools. This application coincides with the [DevTools Debugging Lesson Plan (http://backend.turing.io/module4/lessons/fe_dev_tool_debugging)].
 
 ## Setup
 
@@ -26,7 +26,7 @@ Go visit `http://localhost:3000`.
 
 ## Debugging Practice Scenarios
 
-Each debugging scenario is contained in a separate branch. The master branch contains the application in its most basic state, to coincide with the [DevTools Debugging Lesson Plan](http://frontend.turing.io/lessons/debugging-with-devtools.html). To work through different debugging scenarios, switch to the branch you'd like to work on:
+Each debugging scenario is contained in a separate branch. The master branch contains the application in its most basic state, to coincide with the [DevTools Debugging Lesson Plan](http://backend.turing.io/module4/lessons/fe_dev_tool_debugging). To work through different debugging scenarios, switch to the branch you'd like to work on:
 
 ------------------------------------------
 
