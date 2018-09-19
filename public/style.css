@@ -12,7 +12,7 @@ body > section {
   padding: 0 50px;
   vertical-align: top;
 }
-
+ 
 section#create-expense {
   width: 300px;
 }
@@ -93,5 +93,5 @@ table td {
 }
 
 .highlighted {
-  background-color: #666;
+  background-color: yellow;
 }

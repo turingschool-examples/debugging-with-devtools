@@ -33,6 +33,25 @@ $('#submit-expense').on('submit', (e) => {
 });
 
 
+function highlight () {
+    const tableBody = $('#expenses-data tbody');
+    let value = e.target.value;
+    value = value.toLowerCase();
+    $(`.${value}`).toggleClass('highlighted')
+
+}
+
+
+
 $(document).ready(() => {
-  loadExpenses();
+  getExpenses();
+  // $('#highlight-category').on('click', highlight)
+    $('#highlight-category').on ('change', (e) => {
+      let value = e.target.value;
+      value = value.toLowerCase();
+      $('.highlighted').removeClass('highlighted')
+      $(`.${value}`).toggleClass('highlighted')
+    })
+   
+
 });
