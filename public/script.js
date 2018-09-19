@@ -43,7 +43,7 @@ $('#category-highlight').on('change', (e) => {
   });
 });
 
-
+  
 $(document).ready(() => {
   getExpenses();
 });
