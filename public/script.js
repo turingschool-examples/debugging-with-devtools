@@ -29,10 +29,23 @@ const renderExpenses = (expenses) => {
 // Add event handler for submitting a new expense
 $('#submit-expense').on('submit', (e) => {
   e.preventDefault();
+  let singleExpense = new Expense( e.currentTarget[0].value, e.currentTarget[1].value, e.currentTarget[2].value )
+  let expenses = [];
+  expenses.push(singleExpense)
+  renderExpenses(expenses);
   console.log('Submitting a new expense...');
 });
+
+class Expense {
+  constructor(category, description, cost) {
+    this.category = category;
+    this.description = description;
+    this.cost = cost;
+  }
+}
 
 
 $(document).ready(() => {
   loadExpenses();
 });
+
