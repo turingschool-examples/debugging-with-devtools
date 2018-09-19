@@ -36,7 +36,7 @@ $('#submit-expense').on('submit', (e) => {
   $.ajax({
     method: 'POST',
     dataType: 'json',
-    url: '/expensive',
+    url: '/expenses',
     data: data,
     success: function (data) {
       renderExpenses(data);
