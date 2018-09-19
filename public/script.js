@@ -34,5 +34,11 @@ $('#submit-expense').on('submit', (e) => {
 
 
 $(document).ready(() => {
-  loadExpenses();
+  getExpenses();
+  $('#highlight-category').on('change', (e) => {
+    let value = e.target.value.toLowerCase();
+    $('.highlighted').removeClass('highlighted')
+    $(`.${value}`).toggleClass('highlighted')
+  })
 });
+
