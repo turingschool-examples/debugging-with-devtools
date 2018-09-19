@@ -13,14 +13,14 @@
     <section id="create-expense">
       <h2>Submit New Expense:</h2>
       <form id="submit-expense">
-        <select class="form-field">
+        <select name="category" class="form-field">
           <option>Category</option>
           <option value="transportation">Transportation</option>
           <option value="bills">Bills</option>
           <option value="fun">Fun</option>
         </select>
-        <input type="text" placeholder="Expense Description" class="form-field">
-        <input type="number" placeholder="Cost" class="form-field">
+        <input name="description" type="text" placeholder="Expense Description" class="form-field">
+        <input name="cost" type="number" placeholder="Cost" class="form-field">
         <input type="submit" value="Submit Expense">
       </form>
     </section>
