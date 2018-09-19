@@ -28,10 +28,8 @@ const renderExpenses = (expenses) => {
 
 // Add event handler for submitting a new expense
 $('#submit-expense').on('submit', (e) => {
-  // e.preventDefault()
   let data = {};
   $('.form-field').each((index, formField) => {
-    // debugger;
     data[$(formField).attr('name')] = $(formField).val();
   });
 
