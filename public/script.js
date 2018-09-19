@@ -29,6 +29,14 @@ const renderExpenses = (expenses) => {
 // Add event handler for submitting a new expense
 $('#submit-expense').on('submit', (e) => {
   e.preventDefault();
+  let singleExpense = {
+    category: e.currentTarget[0].value,
+    description: e.currentTarget[1].value,
+    cost: e.currentTarget[2].value
+  } 
+  let expenses = [];
+  expenses.push(singleExpense)
+  renderExpenses(expenses);
   console.log('Submitting a new expense...');
 });
 
@@ -36,3 +44,4 @@ $('#submit-expense').on('submit', (e) => {
 $(document).ready(() => {
   loadExpenses();
 });
+
