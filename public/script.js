@@ -26,24 +26,18 @@ const renderExpenses = (expenses) => {
   });
 };
 
-
-// Highlight expenses that match the selected category
-$('#category-highlight').on('change', (e) => {
-
-  // Remove any pre-existing highlights
-  $('#expenses-data').find('tr').removeClass('highlighted');
-
-  // Get the currently selected category and find matching table rows
-  const selectedCategory = $(e.currentTarget).val();
-  const matches = $('#expenses-data').find(`tr.${selectedCategory}`);
-
-  // Add a highlight class to all matches
-  matches.each((index, match) => {
-    $(match).addClass('highlighted');
-  });
+// Add event handler for submitting a new expense
+$('#submit-expense').on('submit', (e) => {
+  e.preventDefault();
+  console.log('Submitting a new expense...');
 });
 
-  
+
 $(document).ready(() => {
   getExpenses();
+  $('#highlight-category').on('change', (e) => {
+    let value = e.target.value.toLowerCase();
+    $('.highlighted').removeClass('highlighted')
+    $(`.${value}`).toggleClass('highlighted')
+  })
 });
