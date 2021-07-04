@@ -28,13 +28,13 @@ const renderExpenses = (expenses) => {
 
 
 // Highlight expenses that match the selected category
-$('#category-highlight').on('change', (e) => {
+$('#highlight-category').on('change', (e) => {
 
   // Remove any pre-existing highlights
   $('#expenses-data').find('tr').removeClass('highlighted');
 
   // Get the currently selected category and find matching table rows
-  const selectedCategory = $(e.currentTarget).val();
+  const selectedCategory = $(e.currentTarget).val().toLowerCase();
   const matches = $('#expenses-data').find(`tr.${selectedCategory}`);
 
   // Add a highlight class to all matches
